@@ -1,0 +1,200 @@
+.app-container {
+  max-width: 414px; /* iPhone Max width approximately */
+  margin: 0 auto;
+  min-height: 100vh;
+  background-color: var(--bg-color);
+  position: relative;
+  overflow-x: hidden;
+  padding-bottom: 80px; /* Space for bottom nav */
+  box-shadow: 0 0 40px rgba(0,0,0,0.05); /* To separate from desktop background */
+}
+
+/* Header */
+.app-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 1.5rem 1.5rem 1rem;
+}
+
+.icon-btn {
+  width: 40px;
+  height: 40px;
+  border-radius: 12px;
+  background-color: var(--surface);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  color: var(--text-dark);
+  box-shadow: var(--shadow-sm);
+  border: 1px solid rgba(0,0,0,0.03);
+}
+
+.app-header h1 {
+  font-size: 1.125rem;
+  font-weight: 700;
+  color: var(--text-dark);
+}
+
+/* Progress Card */
+.progress-card-container {
+  padding: 0 1.5rem;
+  margin-bottom: 2rem;
+}
+
+.progress-card {
+  background: var(--primary-gradient);
+  border-radius: 1.25rem;
+  padding: 1.5rem;
+  color: white;
+  box-shadow: var(--shadow-fab);
+  position: relative;
+  overflow: hidden;
+}
+
+.progress-title {
+  font-size: 1.125rem;
+  font-weight: 600;
+  margin-bottom: 0.25rem;
+}
+
+.progress-subtitle {
+  font-size: 0.875rem;
+  opacity: 0.8;
+  margin-bottom: 1.5rem;
+}
+
+.progress-bottom {
+  display: flex;
+  justify-content: space-between;
+  align-items: flex-end;
+}
+
+.mock-avatars {
+  display: flex;
+}
+
+.mock-avatar {
+  width: 32px;
+  height: 32px;
+  border-radius: 50%;
+  border: 2px solid #2563EB;
+  background: #fff;
+  margin-left: -10px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 0.75rem;
+  font-weight: 700;
+  color: var(--primary);
+}
+
+.mock-avatar:first-child {
+  margin-left: 0;
+  background: #FCA5A5; /* Mock image colors */
+}
+.mock-avatar:nth-child(2) {
+  background: #6EE7B7;
+}
+
+.progress-bar-container {
+  width: 50%;
+}
+
+.progress-text {
+  display: flex;
+  justify-content: space-between;
+  font-size: 0.75rem;
+  font-weight: 600;
+  margin-bottom: 0.5rem;
+}
+
+.progress-track {
+  height: 6px;
+  background: rgba(255, 255, 255, 0.3);
+  border-radius: 3px;
+  overflow: hidden;
+}
+
+.progress-fill {
+  height: 100%;
+  background: white;
+  border-radius: 3px;
+}
+
+/* Main Content area */
+.main-content {
+  padding: 0 1.5rem;
+}
+
+.section-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: 1.25rem;
+}
+
+.section-header h2 {
+  font-size: 1.25rem;
+  font-weight: 700;
+}
+
+.see-all-btn {
+  color: var(--text-muted);
+  font-size: 0.875rem;
+  font-weight: 600;
+}
+
+/* Bottom Nav */
+.bottom-nav {
+  position: fixed;
+  bottom: 0;
+  width: 100%;
+  max-width: 414px;
+  background: var(--surface);
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 0.5rem 1.5rem;
+  border-top-left-radius: 20px;
+  border-top-right-radius: 20px;
+  box-shadow: 0 -5px 20px rgba(0,0,0,0.03);
+  z-index: 10;
+  height: 70px;
+}
+
+.nav-item {
+  color: var(--text-muted);
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  height: 100%;
+  padding: 0.5rem;
+}
+
+.nav-item.active {
+  color: var(--primary);
+}
+
+.fab-container {
+  position: relative;
+  top: -20px;
+}
+
+.fab {
+  width: 56px;
+  height: 56px;
+  border-radius: 50%;
+  background: var(--primary);
+  color: white;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  box-shadow: var(--shadow-fab);
+  transition: transform 0.2s ease;
+}
+
+.fab:hover {
+  transform: scale(1.05);
+}

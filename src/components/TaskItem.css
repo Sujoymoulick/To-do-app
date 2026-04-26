@@ -1,0 +1,92 @@
+.task-card {
+  display: flex;
+  align-items: center;
+  background: var(--surface);
+  border-radius: 1rem;
+  margin-bottom: 1rem;
+  box-shadow: var(--shadow-sm);
+  transition: transform 0.2s ease, box-shadow 0.2s ease;
+  position: relative;
+  overflow: hidden;
+}
+
+.task-card:active {
+  transform: scale(0.98);
+}
+
+.task-card-content {
+  flex: 1;
+  display: flex;
+  align-items: center;
+  padding: 1rem;
+  width: 100%;
+  text-align: left;
+}
+
+.task-icon {
+  width: 48px;
+  height: 48px;
+  border-radius: 12px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-weight: 700;
+  font-size: 1.25rem;
+  margin-right: 1rem;
+}
+
+.task-details {
+  display: flex;
+  flex-direction: column;
+  flex: 1;
+}
+
+.task-title {
+  font-weight: 700;
+  color: var(--text-dark);
+  font-size: 1rem;
+  margin-bottom: 0.25rem;
+  transition: color 0.2s;
+}
+
+.task-time {
+  font-size: 0.75rem;
+  color: var(--text-muted);
+  font-weight: 600;
+}
+
+.task-actions {
+  display: flex;
+  align-items: center;
+  color: var(--text-muted);
+}
+
+.check-icon {
+  color: var(--primary);
+}
+
+.task-card.completed .task-title {
+  text-decoration: line-through;
+  color: var(--text-muted);
+}
+
+.task-delete-btn {
+  padding: 1rem;
+  color: var(--danger);
+  opacity: 0;
+  transform: translateX(100%);
+  transition: all 0.3s ease;
+  position: absolute;
+  right: 0;
+  height: 100%;
+  background: #fee2e2;
+  border-top-right-radius: 1rem;
+  border-bottom-right-radius: 1rem;
+}
+
+/* Show delete button on hover for desktop, or we can just rely on clicking it if visible.
+   For mobile, we'll make it always slightly visible or show on hover */
+.task-card:hover .task-delete-btn {
+  opacity: 1;
+  transform: translateX(0);
+}
